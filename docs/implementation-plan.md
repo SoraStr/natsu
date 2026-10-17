@@ -15,7 +15,6 @@
    - `src/data/audio-envelope.json`（30fps 共 9369 帧的归一化 `rms`、`low`、`mid`、`high` 数据；一次性分析脚本未入库）。
    - `src/data/lyrics.ts`（含精确起止秒数、帧数与排版样式分类）。
 2. 整理水彩资产：
-   - 从 `public/assets/storyboard-12shot.png` 拆出 12 镜构图参考。
    - 从 `public/assets/pitch-board.png` 拆出 8 大夏末道具贴纸（`public/assets/props/motif-01` ... `motif-08`）与角色三视图。
    - 原始封面存为 `public/assets/reference-cover.png`，高潮帧存为 `public/assets/climax-keyframe.png`。
 3. 使用 `gpt-image-2.5-sunburst` 补充生成宽幅水彩图层：

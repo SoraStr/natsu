@@ -28,19 +28,13 @@ Skills used: Remotion, Superpowers, Garden GPT Image 2 Gen.
 
 > “I need you to be the idea person for a moment and start figuring out how to make a music video. The target is a 2D animation in Remotion, 16:9. The song is n-buna feat. Hatsune Miku — *Mousugu Natsu ga Owaru kara* (MP3 + LRC), and you have strong native image and audio multimodal analysis. Feel free to generate images — use the bundled gpt-image-2 skill and its endpoint and model. For art direction, refer to the album cover in the project root.”
 
-The project began with this sentence; the palette, storyboard, timeline, and compositing plan were defined during production.
-
-## The film
-
-Three train windows float on ivory paper, holding an indigo night sky, chartreuse fireworks, and a girl in a straw hat. Across three summer days she reads, waits, plays piano, and paints. At 3:30 a dissolve moves to an easel behind the station and reveals the windows as part of a painting; from 4:01 the frame breaks, indigo turns to dawn, and the ending returns to the empty windows and a closed novel.
-
-![12-shot storyboard](docs/images/storyboard.jpg)
+The project began with this sentence; the palette, timeline, and compositing plan were defined during production.
 
 ## Production
 
 | Stage | Work | Output |
 | :--- | :--- | :--- |
-| Art direction | Five-color palette (`#F9F7EC / #0E1A3A / #D8E878 / #E88378 / #6FA89E`), pitch board, 12-shot storyboard | `public/assets/pitch-board.png`, `storyboard-12shot.png` |
+| Art direction | Five-color palette (`#F9F7EC / #0E1A3A / #D8E878 / #E88378 / #6FA89E`), pitch board | `public/assets/pitch-board.png` |
 | Plates | 41 stills at 1672×941 with `gpt-image-2.5-sunburst`; same-base differentials, clean cutouts, same-scene zoom | `art-source/prompts/`, `art-source/stills/` |
 | Timeline | 120 BPM, 30 fps, 9,369 frames; LRC timestamps converted to frames; per-frame `rms/low/mid/high` envelope | `src/data/lyrics.ts`, `audio-envelope.json` |
 | Compositing | Five-stage layer stack; 1806×1016 stage box; window `clipPath`; 10 fps stepped frames | `src/components/` |
@@ -52,7 +46,7 @@ Three train windows float on ivory paper, holding an indigo night sky, chartreus
 ```text
 .
 ├── art-source/     41 prompts, 41 stills, album cover
-├── docs/           design spec, implementation plan, previews
+├── docs/           design spec, implementation plan, preview image
 ├── public/         runtime plates, props, cutouts (audio not committed)
 ├── src/            Remotion project (timeline, components, data)
 ├── out/            renders (ignored)

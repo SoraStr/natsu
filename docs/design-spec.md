@@ -9,7 +9,6 @@
 - **美术基准**：`art-source/reference/album-cover.jpeg`（插画师：あわしま / Awashima）
 - **视觉概念稿**：
   - `public/assets/pitch-board.png`（16:9 立项设定与图层/道具/色板总表）
-  - `public/assets/storyboard-12shot.png`（16:9 全曲 12 镜电影感分镜表）
   - `public/assets/climax-keyframe.png`（`03:58` 最终副歌破框破晓高潮概念帧）
 
 ---
@@ -62,7 +61,6 @@
 │   └── assets/
 │       ├── reference-cover.png            # 原始专辑封面
 │       ├── pitch-board.png                # 设定总表
-│       ├── storyboard-12shot.png          # 12镜分镜总表
 │       ├── climax-keyframe.png            # 03:58 破框破晓高潮帧
 │       ├── scenes/                        # 16:9 / 车窗视口水彩场景资产
 │       ├── character/                     # 少女多状态分层抠图 PNG 资产
@@ -141,7 +139,7 @@
 ## 5. 资产生产与水彩无缝合成规范
 
 1. **视觉资产清单**：
-   - 复用已生成的 3 张 `1672×941` 高清概念与分镜资产（从中裁切高精度 12 镜场景图、8 大道具贴纸、角色三态插画与破框高潮大图）。
+   - 复用已生成的 2 张 `1672×941` 高清概念资产（设定总表与高潮帧；道具贴纸与角色图从中裁切）。
    - 使用 `gpt-image-2.5-sunburst` 补充生成专用的高分辨率单幅水彩图层资产（如空车窗前景框、晨/夕/夜窗外无缝卷轴、少女独立姿态透明合成层）。
 2. **纸纹底色融合（Paper-Keying & Multiply Blend）**：
    - 所有水彩局部资产通过 `scripts/prepare-watercolor-assets.py` 处理：以参考纸白 `#F9F7EC` 为基准计算色差与亮度软遮罩，消除矩形图片硬边，使手绘铅笔线与水彩晕染自然融入 Remotion 的 `#F9F7EC` 纸纹背景。
