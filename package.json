@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.535",
+    "@remotion/media": "4.0.535",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.535"

@@ -2,6 +2,11 @@ node_modules
 dist
 .DS_Store
 .env
+.workbuddy
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+o
+
+# The soundtrack is copyrighted; bring your own file when rendering.
+public/audio/*.mp3
